@@ -1,0 +1,114 @@
+*{margin:0;padding:0;list-style: none;}
+html{font-size:10px;}
+body{background:whitesmoke;}
+/*h1 { text-align:center; color:#333; margin:0; font-size:18px; line-height:44px; }*/
+/*h1 a { color:#9f0; text-decoration:none; border-bottom:1px dotted #9f0; }*/
+/*h1 a:hover { color:#fff; border-bottom:1px solid #fff;}*/
+/*===============banner区域开始===============*/
+#box { height:550px; position:absolute; top:0; overflow:hidden;border:1px solid black; }
+#box ul { margin:0; padding-left:0; position:absolute; top:0; left:0; height:550px; z-index:1; }
+#box ul li { list-style:none; float:left; }
+#box p { line-height:30px; position:absolute; bottom:20px; left:0; width:100%; z-index:2; text-align:center; margin:0; }
+#box p a { display:inline-block; height:30px; padding:0 10px; background:#000; font-size:14px; font-family:arial; line-height:30px; color:#fff; text-decoration:none; filter:alpha(opacity:80); opacity:0.8; margin-right:1px; }
+#box p .active { background:yellow; color:#000; font-weight:bold; }
+#box img { height:550px; }
+#wrapper{border:1px solid black;background:#333;}
+#wrapper h1{color:orange;font-size:1rem;}
+/*===============banner区域结束===============*/
+
+/*===============header区域开始===============*/
+header{position:absolute;width:100%;height:70px;top:0;left:0;z-index: 1000;background:rgba(0,0,15,0.05);}
+header nav{width:90%;height:100%;margin:0 auto;}
+header nav ul{width:100%;height:100%;}
+header nav ul li{float:left;width:12%;height:100%;}
+header nav ul li:hover{background:rgba(0,0,15,0.2);}
+header nav ul li a{
+    width:100%;height:100%;
+    /*border:1px solid black;*/
+    display:inline-block;
+    text-align: center;
+    line-height:70px;
+    color:white;
+    text-decoration: none;
+    font-size:1.5rem;
+}
+/*===============header区域结束===============*/
+
+/*===============content区域开始===============*/
+#content{width:90%;}
+#flip{text-align:center;color:black;font-size:1.5rem;}
+#flip #flip_s{font-size:1rem;}
+
+#content .choose{width:100%;text-align: center;}/*====选项卡=====*/
+#content .choose #tab_t{overflow: hidden;display:inline-block;width:40%;cursor:pointer;}/*====选项卡标题=====*/
+#tab_t li{float:left;width:33.3%;color:#333;font-weight:bolder;font-size:1.5rem;}/*====选项卡标题选项=====*/
+#tab_t .act{color:orange;}
+
+#tab_c{margin-top:20px;overflow:hidden;height:350px;width:100%;}/*====选项卡内容=====*/
+#tab_c a{display:inline-block;width:295px;height:350px;}/*====选项卡内容=====*/
+#tab_c a span{color:#333;font-size:1rem;}
+#tab_c a img{width:100%;height:295px;border-radius:20px;}/*====选项卡内容图片设置=====*/
+#tab_c .hide{display: none;}
+
+#roll{width:100%;margin:80px 0;}
+#roll p{text-align:center;color:#333;font-size:1.5rem;}
+#roll ul{overflow: hidden;width:100%;height:200px;}
+#roll ul li{float:left;width:25%;height:100%;}
+#roll ul li a{width:100%;height:100%;}
+#roll ul li a img{width:100%;height:80%;border-radius:30px;}
+#roll ul li a span{color:#333;}
+
+
+
+/*================footer区域开始================*/
+footer{width:100%;height:220px;border:1px solid black;background:#222430;}
+footer .top{width:100%;border-bottom:1px solid rgba(0,0,15,0.5);overflow:hidden;margin-top:2%;padding-bottom: 2%;}/*footer区域左边*/
+footer .top p{width:10%;height:50%;float:left;color:black;text-align: center;margin-left:5%;}/*footer区域左边宽度*/
+footer .top p a{color:#666;}/*footer区域左边字体颜色*/
+footer .top p a:hover{color:#ec6909;}/*footer区域左边hover字体颜色变化*/
+footer .top p .act{color:#999;}/*footer区域左边首行字体颜色*/
+footer .top #focus{width:250px;float:right;margin-right:70px;}/*footer区域右边样式*/
+footer .top #focus p{width:50%;height:100%;margin:0;}/*footer区域右边宽度*/
+footer .top #focus p span{color:#999;}/*footer区域右边标题*/
+footer .top #focus a{display:inline-block;width:26px;height:26px;}/*footer区域右边小图标*/
+footer .top #focus a:nth-child(3){background:url("../images/icon/icon4.png") no-repeat 0 -29px;}/*footer区域右边小图标*/
+footer .top #focus a:nth-child(4){background:url("../images/icon/icon4.png") no-repeat -32px -29px;}/*footer区域右边小图标*/
+footer .top #focus a:nth-child(5){background:url("../images/icon/icon4.png") no-repeat -64px -29px;}/*footer区域右边小图标*/
+footer .top #focus a:nth-child(7){background:url("../images/icon/icon4.png") no-repeat 0 -61px;}/*footer区域右边小图标*/
+footer .top #focus a:nth-child(8){background:url("../images/icon/icon4.png") no-repeat -32px -61px;}/*footer区域右边小图标*/
+footer .top #focus #scan{width:95px;height:95px;}/*footer区域右边小图标*/
+footer .top #focus #scan img{width:100%;height:100%;}/*footer区域右边小图标*/
+
+footer .bottom{text-align: center;}/*footer底部区域*/
+footer .bottom a{margin-top:10px;display:inline-block;}/*footer底部区域*/
+
+@media screen and (min-width: 1021px)and (max-width: 1350px){
+    #tab_c a{width:33%;}
+}
+@media screen and (min-width:551px)and (max-width: 1070px){
+    #tab_c{height:700px;}
+    #tab_c a{width:49%;}
+    #roll ul{height:400px;}
+    #roll ul li{width:50%;height:50%;}
+}
+@media screen and (max-width: 550px){
+    #tab_c{height:1400px;}
+    #tab_c a{width:100%;}
+    #roll ul{height:800px;}
+    #roll ul li{width:100%;height:25%;}
+}
+@media screen and (max-width: 820px){
+    footer{height:240px;}
+    footer .top p{width:19%;}
+    #focus{display:none;}
+    header nav ul li{width:20%;}
+}
+@media screen and (max-width: 440px){
+    footer{height:120px;}
+    footer .top{display:none;}
+    header{height:350px;background:rgba(0,0,15,0.3);}
+    header nav{width:100%;}
+    header nav ul li{width:100%;height:70px;}
+    header nav ul li a{color:orange;}
+    header nav ul li a:hover{font-size:2rem;}
+}

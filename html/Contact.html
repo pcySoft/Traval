@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <title>Contact</title>
+    <!--<link rel="stylesheet" href="../css/normalize.css" type="text/css">-->
+    <!--<link rel="stylesheet" href="../css/htmleaf-demo.css" type="text/css">-->
+    <link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css"/>
+    <link rel="stylesheet" href="../css/Contact.css" type="text/css">
+    <!--<link rel="stylesheet" href="../css/txt.wav.css" type="text/css">-->
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a href="Index.html" class="hover">首页</a>
+                <div class="extend">
+                    <!--<a href="">二级子菜单</a><br>-->
+                    <!--<a href="">无级子菜单</a>-->
+                </div>
+            </li>
+            <li><a href="Find.html" class="hover">发现</a>
+                <div class="extend"></div>
+            </li>
+            <li><a href="Destination.html" class="hover">目的地</a>
+                <div class="extend"></div>
+            </li>
+            <li><a href="About.html" class="hover">介绍</a>
+                <div class="extend"></div>
+            </li>
+            <li><a href="Contact.html" class="hover">联系</a>
+                <div class="extend"></div>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<section id="content">
+    <section class="center">
+        <p>好吧！乐途就是这么牛叉</p><br>
+        <p>快来加入我们吧</p>
+        <form action="">
+            <input type="text" id="textNumber" pattern="\d+" placeholder="你的手机号码" required="required"><br>
+            <input type="email" id="textEmail" placeholder="邮箱地址" required="required"><br>
+            <input type="text" placeholder="你的昵称" required="required"><br>
+            <input type="text" placeholder="你的密码" required="required"><br>
+            <select name="" id="select">
+                <option value="男">男</option>
+                <option value="女">女</option>
+            </select><br>
+            <input type="submit" id="submit" value="加入我们" name="submit">
+        </form>
+        <form action="" id="text">
+            <textarea name="" id="" cols="40" rows="10"></textarea><br>
+            <button id="left">提交</button>
+            <button id="right">重置</button>
+        </form>
+    </section>
+    <section id="top">
+        <a href="">求职信箱</a>
+        <a href="">意见信箱</a>
+        <a href="">在线客服</a>
+    </section>
+    <section id=map>
+        <section id="container"></section>
+    </section>
+
+
+</section>
+
+
+
+
+
+
+
+<footer>
+    <div class="top">
+        <p>
+            <a href="" class="act">关于我们</a><br>
+            <a href="">乐途简绍</a><br>
+            <a href="">招贤纳士</a><br>
+            <a href="">网站荣誉</a><br>
+            <a href="">联系我们</a>
+        </p>
+        <p>
+            <a href="" class="act">商家服务</a><br>
+            <a href="">乐途营销</a><br>
+            <a href="">商家登录</a><br>
+            <a href="">商家注册</a><br>
+            <a href="">联系我们</a>
+        </p>
+        <p>
+            <a href="" class="act">新手上路</a><br>
+            <a href="">预定帮助</a><br>
+            <a href="">服务条款</a><br>
+            <a href="">版权声明</a><br>
+            <a href="">联系我们</a>
+        </p>
+        <p>
+            <a href="" class="act">合作伙伴</a><br>
+            <a href="">国家旅游局</a><br>
+            <a href="">光明网旅游</a><br>
+            <a href="">人民网旅游</a><br>
+            <a href="">央视网旅游</a>
+        </p>
+        <div id="focus">
+            <p>
+                <span>关注我们</span><br>
+                <a href=""></a>
+                <a href=""></a>
+                <a href=""></a><br>
+                <a href=""></a>
+                <a href=""></a>
+            </p>
+            <p>
+                <a href="" id="scan"><img src="../images/icon/icon5.png" alt=""></a>
+            </p>
+        </div>
+    </div>
+    <div class="bottom">
+        <a href="">京ICP备12008860号-1</a><a href="">广电节目制作许可证：1313号</a>
+        <a href="">京公网安备 11010502001653号</a><br><span>Copyright © 2005 - 2016  All Rights Reserved. </span>
+    </div>
+
+</footer>
+<script src="http://webapi.amap.com/maps?v=1.3&key=您申请的key值"></script>
+<script type="text/javascript">
+    <!--按照默认属性创建地图和标记-->
+    var map = new AMap.Map('container');
+    map.setZoom(8);//设置缩放级别
+    map.setCenter([116.2695662200,40.1312580041]);//设置中心坐标
+    var marker = new AMap.Marker({//创建标记
+        position: [116.2695662200,40.1312580041],//设置标记位置
+        map:map//设置map属性，使得标记能被立即添加到地图上
+    });
+    //marker.setMap();移除点标记
+    <!--创建并且设置信息窗口-->
+    AMap.plugin('AMap.AdvancedInfoWindow',function(){
+        infowindow = new AMap.AdvancedInfoWindow({
+            content: '<div class="info-title">高德地图</div><div class="info-content">'+'我的位置。<br/>'+'</div>',//设置信息窗口内容
+            offset: new AMap.Pixel(10,-30)//设置窗口位置相对于标记的偏移量
+        });
+        infowindow.open(map,[116.2695662200,40.1312580041]);//创建好信息窗口后，立即调用open方法，让它显示在需要的位置
+    });
+    <!--添加工具条和比例尺子-->
+    AMap.plugin(['AMap.ToolBar','AMap.Scale'],function(){//加载工具条和比例尺两个插件放到数组中
+        var toolBar = new AMap.ToolBar();//在回调函数里进行控件的生成和添加
+        var scale = new AMap.Scale();
+        map.addControl(toolBar);
+        map.addControl(scale);
+    });
+    //map.removeControl(toolBar);移除控件
+</script>
+<script src="../js/txt.wav.min.js"></script>
+</body>
+</html>
